@@ -48,8 +48,16 @@ plan (recon + seed mission) with the July countdown.
 - Note: server is plain HTTP → browser geolocation on /rider does NOT work remotely;
   phones report via the Traccar Client app until HTTPS + domain lands (build item 5).
 
-Remaining this week: user installs Traccar Client on 2 phones (ids `me`, `mom`) and
-**orders the 4G trackers (critical path, 2–4 week shipping)**. Build queue for Claude
+**MILESTONE 2026-07-06 (later same day): first vehicle tracked end-to-end in production.**
+User verified the full pipeline live: curl → OsmAnd gateway (:5055) → store → SSE →
+dashboard showed "1 vehicles online · 1 moto" with the dot in Dakar. Server-side is
+proven. The user's iPhone (Traccar Client, id `myphone`) was configured correctly
+(URL http://165.232.98.59:5055, continuous tracking ON) but hadn't reported yet as of
+last check — suspected cause: Interval was 300s + stop detection while stationary.
+Fix in progress: Interval → 10, tap "Send location", check Vehicles list.
+
+Remaining this week: finish phone reporting (`myphone` + mom's phone) and
+**order the 4G trackers (critical path, 2–4 week shipping)**. Build queue for Claude
 sessions: "NOT done" items 1–5 above — all needed before the August flight.
 
 ## Deliverables outside the repo (the user works from an iPad and can't browse files)
