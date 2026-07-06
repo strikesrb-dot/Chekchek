@@ -22,7 +22,8 @@ export function startOsmandServer(store, port, log = console.log) {
     const mode = isVehicleMode(q.get('mode')) ? q.get('mode') : 'moto';
     store.upsertVehicle({ id: `osmand-${id}`, mode, source: 'osmand', label: id });
 
-    const tsRaw = Number(q.get('timestamp'));
+    // Number(null) is 0, so guard for the param's absence before parsing.
+    const tsRaw = q.has('timestamp') ? Number(q.get('timestamp')) : NaN;
     store.setPosition(`osmand-${id}`, {
       lat,
       lon,
