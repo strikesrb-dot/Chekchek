@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChekChek — Conducteur</title>
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body class="rider">
+  <header class="topbar"><strong>ChekChek</strong> <span class="muted">conducteur</span></header>
+
+  <main class="rider-main">
+    <section id="register-card" class="card">
+      <h2>Inscription</h2>
+      <label>Nom / plaque <input id="reg-label" placeholder="Ex: Modou — DK-1234-AA" /></label>
+      <label>Type de véhicule <select id="reg-mode"></select></label>
+      <button id="reg-go">Se connecter</button>
+    </section>
+
+    <section id="work-card" class="card hidden">
+      <div id="status-line" class="status-line">Hors ligne</div>
+      <button id="toggle-online">Passer en ligne</button>
+
+      <div id="offer-card" class="offer hidden">
+        <h2>Nouvelle course&nbsp;!</h2>
+        <p id="offer-details"></p>
+        <div class="row">
+          <button id="offer-accept" class="accept">Accepter</button>
+          <button id="offer-decline" class="ghost">Refuser</button>
+        </div>
+      </div>
+
+      <div id="active-job" class="active-job hidden">
+        <h2>Course en cours</h2>
+        <p id="job-state"></p>
+        <button id="job-advance"></button>
+      </div>
+
+      <p id="gps-line" class="muted"></p>
+    </section>
+  </main>
+
+  <script type="module" src="/js/rider.js"></script>
+</body>
+</html>

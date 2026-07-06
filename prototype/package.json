@@ -1,0 +1,15 @@
+{
+  "name": "chekchek-prototype",
+  "version": "0.1.0",
+  "description": "ChekChek tracking + dispatch core prototype (multi-modal, zero dependencies)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "sim": "node sim/simulate.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

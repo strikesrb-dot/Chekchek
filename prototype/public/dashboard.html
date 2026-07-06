@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChekChek — Live Ops</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <strong>ChekChek</strong> <span class="muted">live ops — Dakar</span>
+    <span id="stats" class="stats"></span>
+  </header>
+
+  <main class="layout">
+    <div id="map"></div>
+
+    <aside class="panel">
+      <section>
+        <h2>New job</h2>
+        <p class="muted" id="job-hint">Click the map to set <b>pickup</b>, click again for <b>dropoff</b>.</p>
+        <label>Vehicle mode
+          <select id="job-mode"></select>
+        </label>
+        <button id="job-create" disabled>Request job</button>
+        <button id="job-reset" class="ghost">Reset points</button>
+      </section>
+
+      <section>
+        <h2>Jobs</h2>
+        <ul id="jobs" class="list"></ul>
+      </section>
+
+      <section>
+        <h2>Vehicles</h2>
+        <ul id="vehicles" class="list"></ul>
+      </section>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>
