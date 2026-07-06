@@ -55,6 +55,9 @@ into a permanent platform node.
   These riders get dispatched within their declared zone with manual confirmation.
 - Also the degradation path for tiers 1–2 when data networks fail: trackers queue and
   batch; the app queues and batches; USSD is the channel of last resort.
+- The same zero-data philosophy applies *outbound* to customers: the voice status line
+  (IVR with caller-ID lookup and missed-call callback, doc 01) reads live tracking state
+  to any handset with voice credit — no app, no data, no literacy requirement.
 
 ## Position pipeline (all tiers converge)
 

@@ -23,8 +23,14 @@ platform, and real fleet vehicles (any mode) show live on a map from $12 GPS box
    dispatch override, rider suspend.
 7. **Fleet tracking v1:** register a device → live map + trip history + geofence alert
    for fleet owners (this is sellable on day one to taxi/van owners too).
+8. **Voice status line v1 (IVR):** one local number + a voice API; caller-ID lookup of
+   the caller's active order; stitched prerecorded Wolof/French clips announcing driver
+   distance/ETA and movement state (moving / stopped nearby); missed-call (flash)
+   callback so the check costs the customer nothing. Cheap to build on the live-state
+   store that already exists — and it's the zero-data fallback channel (doc 01).
 
-**Out (explicitly):** passenger hailing, USSD, surge/dynamic pricing, in-app chat,
+**Out (explicitly):** passenger hailing, USSD (long short-code lead times — the IVR line
+covers the no-data need first), surge/dynamic pricing, in-app chat,
 routing-engine ETAs (haversine × 1.4 is fine at launch), iOS, automated payouts,
 Kafka (a message bus abstraction ships first; Kafka lands in month 4–6 when volume
 justifies it).
@@ -71,7 +77,8 @@ Run it: see `prototype/README.md`.
 - **Weeks 1–4:** tracking core productionized (Postgres/Redis/MQTT), device gateway
   with real GT06 hardware on Senegalese SIMs, rider app skeleton.
 - **Weeks 5–8:** dispatch + full job lifecycle on real devices; ops console; merchant
-  dashboard + WhatsApp bot; Wave sandbox integration.
+  dashboard + WhatsApp bot; Wave sandbox integration; IVR voice line recorded (Wolof
+  voice artist: numbers, distances, status phrases) and wired to live state.
 - **Weeks 9–12:** closed pilot — 50 riders, 10 merchants, 200 fleet boxes; daily
   field iteration; CDP filing done; hardware candidate chosen.
 - **Day 90 demo:** a merchant order placed on WhatsApp, dispatched to a real rider,

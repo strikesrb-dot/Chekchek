@@ -67,6 +67,17 @@ same backbone — see doc 05, Phase 3. Build the backbone once.
 - App (Android first, tiny APK; iOS later; a mobile-web fallback for one-off senders).
 - **WhatsApp bot** for delivery requests — Senegalese commerce already lives on WhatsApp;
   meeting senders there beats forcing an install.
+- **Voice status line (IVR)** — the zero-data channel. A customer with an active order
+  calls a local number; the system recognizes them by **caller ID** (no menus), reads the
+  driver's live position, and answers with stitched prerecorded **Wolof/French** clips:
+  *"Sa livreur mingi ci yoon wi… il est à… trois… kilomètres… environ dix minutes."*
+  - **Movement-aware prompts** from GPS speed: moving steadily → "your driver is on the
+    way, ~6 minutes"; stopped near the destination for several minutes → "your driver has
+    stopped nearby, he may be looking for your address — stay reachable."
+  - **Missed-call (flash) callback**: the customer flashes the number and hangs up (free);
+    the platform calls back and plays the status. Costs us a few francs, costs them nothing.
+  - Needs only voice credit and any handset — covers customers with no data, no smartphone,
+    or low literacy. Voice numbers/rates via operators or an aggregator (ARTP — doc 04).
 - USSD short code + call center for hailing and price checks (regional passengers).
 
 ### Fleet owner dashboard (web + Android)
