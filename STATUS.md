@@ -36,10 +36,21 @@ Ordered — this is the build queue for upcoming sessions:
 ## Where the user is in the playbook
 
 **Hard deadline: the user flies to Senegal in August for 10 days.** Doc 10 is the trip
-plan (recon + seed mission) with the July countdown. Nothing started yet — next actions
-this week: order the 4G trackers (critical path, 2–4 week shipping) and rent/deploy the
-server (doc 08 steps 0–2). The pre-trip build queue for Claude sessions is the "NOT done"
-list above, items 1–5 — all needed before the flight.
+plan (recon + seed mission) with the July countdown.
+
+**MILESTONE 2026-07-06: the prototype is DEPLOYED AND LIVE on the internet.**
+- DigitalOcean droplet (London, $6/mo, Ubuntu 24.04), IP **165.232.98.59**, hostname
+  ChekChek. Runs as systemd service `chekchek` (auto-restart, starts on boot).
+- Dashboard: http://165.232.98.59:8080 · phone gateway :5055 · GT06 gateway :5023.
+- Code lives in `/opt/chekchek` (branch `claude/check-check-gps-app-fm4knp`), cloned
+  with a read-only fine-grained GitHub token (user should rotate it after the trip).
+- Update procedure: `cd /opt/chekchek && git pull && systemctl restart chekchek`.
+- Note: server is plain HTTP → browser geolocation on /rider does NOT work remotely;
+  phones report via the Traccar Client app until HTTPS + domain lands (build item 5).
+
+Remaining this week: user installs Traccar Client on 2 phones (ids `me`, `mom`) and
+**orders the 4G trackers (critical path, 2–4 week shipping)**. Build queue for Claude
+sessions: "NOT done" items 1–5 above — all needed before the August flight.
 
 ## Deliverables outside the repo (the user works from an iPad and can't browse files)
 
