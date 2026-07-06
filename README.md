@@ -34,6 +34,7 @@ Three things make this different from cloning Uber:
 | [docs/07-engineering-practices.md](docs/07-engineering-practices.md) | How we keep the codebase healthy while building with AI (plain-language; enforced by [CLAUDE.md](CLAUDE.md)) |
 | [docs/08-playbook-us.md](docs/08-playbook-us.md) | **The playbook, part 1**: today → deployed server, mom-test, hardware bench-tested (US phase) |
 | [docs/09-playbook-senegal.md](docs/09-playbook-senegal.md) | **The playbook, part 2**: on the ground — SIMs, company, mechanics, first paying owners |
+| [docs/10-august-trip.md](docs/10-august-trip.md) | **The August trip**: 10-day recon + seed mission, with the July countdown |
 | [STATUS.md](STATUS.md) | Living handoff file: what works, what's next — read/updated by every session |
 | [docs/resume-fr.md](docs/resume-fr.md) | Résumé exécutif en français |
 | [docs/summary-ar.md](docs/summary-ar.md) | الملخّص التنفيذي بالعربية |

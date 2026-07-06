@@ -35,7 +35,20 @@ Ordered — this is the build queue for upcoming sessions:
 
 ## Where the user is in the playbook
 
-Doc 08 (US phase): not started — next action is Step 0 (rent the DigitalOcean server).
+**Hard deadline: the user flies to Senegal in August for 10 days.** Doc 10 is the trip
+plan (recon + seed mission) with the July countdown. Nothing started yet — next actions
+this week: order the 4G trackers (critical path, 2–4 week shipping) and rent/deploy the
+server (doc 08 steps 0–2). The pre-trip build queue for Claude sessions is the "NOT done"
+list above, items 1–5 — all needed before the flight.
+
+## Deliverables outside the repo (the user works from an iPad and can't browse files)
+
+The user needs previews/artifacts/PNGs, not repo paths. Existing:
+- Demo simulation artifact: https://claude.ai/code/artifact/af5a775c-ea1c-4116-9e38-1e0f80ad4b69
+- Playbook posters artifact (3 posters: US, Senegal, August trip):
+  https://claude.ai/code/artifact/92e2ea6a-bb6e-4b9d-90c2-f752234d9df1
+- Posters also delivered as PNGs in-chat. When docs change materially, re-render and
+  resend (poster source: scratchpad `playbook-posters.html` — regenerate if missing).
 
 ## Decisions already made (do not relitigate)
 
