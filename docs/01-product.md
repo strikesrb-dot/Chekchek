@@ -67,6 +67,12 @@ same backbone — see doc 05, Phase 3. Build the backbone once.
 - App (Android first, tiny APK; iOS later; a mobile-web fallback for one-off senders).
 - **WhatsApp bot** for delivery requests — Senegalese commerce already lives on WhatsApp;
   meeting senders there beats forcing an install.
+- **Two-way calling is a first-class feature, not an afterthought.** Drivers in Senegal
+  routinely call the customer ("I can't find you") — the product embraces this instead of
+  fighting it. The customer sees the driver's name, photo, plate **and phone number with a
+  one-tap call button** (and via SMS for non-app customers: "your driver: Modou, DK-1234-AA,
+  77 XXX XX XX"); the driver gets the same for the customer, plus a landmark-based address
+  note field. Later: optional number masking through a call bridge for privacy.
 - **Voice status line (IVR)** — the zero-data channel. A customer with an active order
   calls a local number; the system recognizes them by **caller ID** (no menus), reads the
   driver's live position, and answers with stitched prerecorded **Wolof/French** clips:
