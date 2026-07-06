@@ -59,6 +59,41 @@ into a permanent platform node.
   (IVR with caller-ID lookup and missed-call callback, doc 01) reads live tracking state
   to any handset with voice credit — no app, no data, no literacy requirement.
 
+## Making the box tamper-resistant (four layers)
+
+Threat model: thieves (want the moto), riders (want privacy from the owner), and
+resellers (want the box gone). No layer is perfect; stacked, they make tampering
+pointless because every attack *itself* raises an alarm.
+
+1. **Physical:** hidden install (inside the frame/under the tank, not just under the
+   seat), wiring wrapped in loom tape so it reads as stock harness, installer varies
+   the location between vehicles so no "known spot" spreads, tamper-evident seal over
+   the case screws. For high-value fleets: a cheap **decoy tracker** in the obvious
+   place, the real one buried. Immobilizer relay mounted *separately* from the box.
+2. **Device features (selection criteria):** internal backup battery + **power-cut
+   alarm** (cutting the wires = instant alert, standard on GT06-family), vibration/
+   tow alarm, case-open detection (Teltonika tier), **SMS command password** (change
+   the default! otherwise a thief texts the box to re-point it), and jam-detection
+   where available. Prefer models where the SIM is inside the sealed case; eSIM
+   variants at scale.
+3. **Server-side (our code — cheap and powerful):** last-seen watchdog ("Box silent
+   45 min during work hours" → owner alert), power-cut event → immediate
+   notification, physics checks (teleporting/impossible speed = spoofing flag),
+   sudden signal loss while cell towers still visible = jamming suspicion, and
+   phone-vs-box **cross-check** when both exist on one vehicle (disagreement = flag).
+   Silence is itself a signal: a tracker that stops reporting misses its next
+   check-in within a minute — the alarm nobody can prevent from firing.
+4. **Social/contractual:** installs done by *our* certified mechanics only, box
+   presence recorded with photos at install, rider agreement: tampered box = deposit
+   forfeited / removed from job flow. In the work-and-pay financing model the box is
+   the lender's condition — tampering defaults the loan. Make tampering economically
+   irrational, not just hard.
+
+Reality check on jammers/spoofers: $20 GPS jammers exist. Mitigation is detection +
+LBS (cell-tower) fallback positioning + the simple fact that a jammed moto still
+can't hide *that* it went dark, when, and where it was last seen — which is usually
+enough to recover it.
+
 ## Position pipeline (all tiers converge)
 
 ```
