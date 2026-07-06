@@ -42,6 +42,9 @@ and propose the compliant way instead of complying silently.
    extend/reuse it. Duplication is a bug.
 10. **When a file is refactored/split, update this file's Project shape section** if the
     layout changed.
+11. **Session handoff protocol:** at the START of every session, read `STATUS.md`.
+    Before ENDING any session that changed anything, update `STATUS.md` (what now works,
+    what's next, decisions made) and commit it. Never leave state only in the chat.
 
 ## Conventions
 

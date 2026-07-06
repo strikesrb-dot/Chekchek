@@ -32,6 +32,9 @@ Three things make this different from cloning Uber:
 | [docs/05-rollout.md](docs/05-rollout.md) | Phased go-to-market: one city, one vertical first — then multi-modal, then the country |
 | [docs/06-mvp.md](docs/06-mvp.md) | The concrete 90-day MVP: what we build first, tech stack, what we deliberately skip |
 | [docs/07-engineering-practices.md](docs/07-engineering-practices.md) | How we keep the codebase healthy while building with AI (plain-language; enforced by [CLAUDE.md](CLAUDE.md)) |
+| [docs/08-playbook-us.md](docs/08-playbook-us.md) | **The playbook, part 1**: today → deployed server, mom-test, hardware bench-tested (US phase) |
+| [docs/09-playbook-senegal.md](docs/09-playbook-senegal.md) | **The playbook, part 2**: on the ground — SIMs, company, mechanics, first paying owners |
+| [STATUS.md](STATUS.md) | Living handoff file: what works, what's next — read/updated by every session |
 | [docs/resume-fr.md](docs/resume-fr.md) | Résumé exécutif en français |
 | [docs/summary-ar.md](docs/summary-ar.md) | الملخّص التنفيذي بالعربية |
 
