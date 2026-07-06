@@ -30,7 +30,10 @@ Ordered — this is the build queue for upcoming sessions:
 3. **Trip history view** — per-vehicle daily trails ("where did it go yesterday").
 4. **Geofence / off-hours alerts** for owners.
 5. **HTTPS + a domain** (rider GPS in browsers requires HTTPS off-localhost; use Caddy).
-6. Later, per docs 05–06: real GT06 hardware quirks, payments (Wave), IVR line,
+6. **Live-motion map**: dashboard markers should animate smoothly between updates
+   (interpolate positions client-side) so 3–10 s reporting *feels* like real-time.
+   User explicitly wants a faster-feeling map — this is the right fix, not 1 s intervals.
+7. Later, per docs 05–06: real GT06 hardware quirks, payments (Wave), IVR line,
    ordering marketplace.
 
 ## Where the user is in the playbook
