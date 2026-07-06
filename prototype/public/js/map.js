@@ -4,6 +4,13 @@
 import { MODE_COLORS, DAKAR_CENTER } from './config.js';
 
 export function createMap(elementId) {
+  // Degrade gracefully if Leaflet failed to load — lists and job flow must
+  // keep working even when the map can't render.
+  if (typeof L === 'undefined') {
+    document.getElementById(elementId).textContent = 'Map library unavailable — live lists still active.';
+    return { map: { on() {} }, upsertVehicle() {}, addPin() {}, removeLayer() {} };
+  }
+
   const map = L.map(elementId).setView([DAKAR_CENTER.lat, DAKAR_CENTER.lon], 13);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors',

@@ -56,4 +56,5 @@ test/     node --test suites for the codec, dispatch, geo
 ## Deliberate prototype shortcuts (production path in docs/03)
 
 In-memory store instead of Redis/Postgres · SSE instead of MQTT fan-out · straight-line
-ETAs instead of OSRM · no auth on the API · Leaflet/OSM tiles from public CDNs.
+ETAs instead of OSRM · no auth on the API · map tiles from the public OSM server (Leaflet
+itself is vendored in `public/vendor/`, so everything but the map background works offline).
