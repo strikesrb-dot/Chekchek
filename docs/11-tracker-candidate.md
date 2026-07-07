@@ -20,11 +20,21 @@ Found on Alibaba during procurement. **Confirmed compatible with the ChekChek se
 - This means it points at our own server, not a vendor-locked app. This is the
   single most important requirement, and it passed.
 
-### ⧗ Still to confirm before bulk order
-1. **4G LTE bands** — must cover US (B2/B4/B12/B66) AND Senegal/Orange (B3/B7/B20).
-   Ask for a global-band SKU. A region-locked variant is the main risk.
-2. **Sample-test first:** order 3–5 samples, wire one to a moto/12 V supply, send the
-   SERVER SMS, confirm it appears on the dashboard and the engine-cut works. THEN bulk.
+### ✓ LTE bands confirmed (2026-07-07)
+Seller confirmed the "full coverage" global variant (model **G900LS**):
+- **LTE-FDD B1/B2/B3/B4/B5/B7/B8/B28/B66** + GSM 850/900/1800/1900.
+- **Senegal (Orange): solid** — B3 (1800, Orange's primary LTE band) + B7 + B8; GSM
+  900/1800 gives 2G fallback.
+- **USA testing: works** — B2/B4/B66 connect in populated areas. Caveat: no B12/B71
+  low-band, so deep-indoor/rural US signal is weaker (fine for bench/car testing).
+- Extra features noted: FOTA (remote firmware update), cut-fuel, ignition on/off detect.
+
+**BOTH blocking questions now answered → cleared for sample order.**
+
+### Next step: sample-test before bulk
+Order 3–5 samples (MOQ 5, ~$13.56 sample price), wire one to a moto/12 V supply, send
+`SERVER,0,165.232.98.59,5023,0#`, confirm it appears on the dashboard and the engine-cut
+works. THEN place the 50–100 unit order at $10–12.
 
 ### Cost model fit (free-first-month box)
 - Box ~$10–12 + install ~$4 + SIM ≈ **$16 sunk/vehicle**; box stays ChekChek property
