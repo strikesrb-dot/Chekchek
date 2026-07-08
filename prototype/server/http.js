@@ -67,7 +67,7 @@ function openEventStream(store, req, res) {
 }
 
 async function serveStatic(pathname, res) {
-  const routeMap = { '/': '/dashboard.html', '/rider': '/rider.html' };
+  const routeMap = { '/': '/dashboard.html', '/rider': '/rider.html', '/ardoise': '/ardoise.html' };
   const rel = routeMap[pathname] ?? pathname;
   const file = path.normalize(path.join(PUBLIC_DIR, rel));
   if (!file.startsWith(PUBLIC_DIR)) {

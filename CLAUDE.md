@@ -62,3 +62,10 @@ and propose the compliant way instead of complying silently.
 - [ ] `npm test` green, new logic covered
 - [ ] Docs touched if behavior/structure changed
 - [ ] Committed with a descriptive message
+
+## Additional module (Ardoise Grossiste — receivables)
+- `server/ledger.js` — depot customer tabs, FIFO payment allocation.
+- `server/aging.js` — aging buckets + portfolio report.
+- `server/landedcost.js` — landed-cost / floor-price calculator.
+- `server/ardoise-api.js` — /api/ardoise/* routes (mounted before tracking API in index.js).
+- `public/ardoise.html` + `css/ardoise.css` + `js/ardoise.js` — depot dashboard (/ardoise).

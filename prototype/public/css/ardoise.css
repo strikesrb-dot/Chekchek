@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f4f2ec; color: #20241c; }
+.topbar { padding: 12px 18px; background: #0a4f29; color: #fff; display: flex; gap: 10px; align-items: baseline; }
+.topbar .muted { color: #b7e0c5; font-size: 0.9em; }
+.total { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.layout { display: grid; grid-template-columns: 320px 1fr; gap: 16px; padding: 16px; align-items: start; }
+.panel, .report { background: #fff; border: 1px solid #e0d9c6; border-radius: 12px; padding: 16px; }
+h2 { font-size: 1em; margin: 4px 0 10px; }
+.panel h2 + h2, .panel button + h2 { margin-top: 22px; border-top: 1px solid #eee; padding-top: 16px; }
+label { display: block; margin: 8px 0; font-size: 0.9em; }
+input, select { width: 100%; padding: 9px; margin-top: 4px; border: 1px solid #ccc; border-radius: 7px; font-size: 1em; }
+.row { display: flex; gap: 8px; }
+.row input { flex: 1; }
+button { padding: 11px 14px; margin-top: 8px; border: 0; border-radius: 8px; background: #0a4f29; color: #fff; font-size: 0.95em; cursor: pointer; }
+button.pay { background: #15803d; }
+button.ghost { background: #e5e7eb; color: #20241c; }
+.muted { color: #6a7060; font-size: 0.9em; }
+
+.buckets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+.bucket { border-radius: 9px; padding: 10px; text-align: center; }
+.bucket .k { font-size: 0.72em; letter-spacing: 0.04em; text-transform: uppercase; color: #6a7060; }
+.bucket .v { font-weight: 800; font-variant-numeric: tabular-nums; margin-top: 3px; }
+.b0 { background: #e6f4ea; } .b1 { background: #fdf3d7; } .b2 { background: #fbe4cf; } .b3 { background: #f8d4cd; }
+
+.debtors { list-style: none; margin: 0; padding: 0; }
+.debtors li { display: flex; align-items: baseline; gap: 8px; padding: 10px 4px; border-bottom: 1px solid #f0ede3; }
+.debtors .name { font-weight: 600; }
+.debtors .age { font-size: 0.8em; color: #b3402a; }
+.debtors .bal { margin-left: auto; font-weight: 800; font-variant-numeric: tabular-nums; }
+.empty { color: #6a7060; padding: 12px 4px; }
+
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }

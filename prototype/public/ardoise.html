@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ardoise Grossiste — Dépôt</title>
+  <link rel="stylesheet" href="/css/ardoise.css" />
+</head>
+<body>
+  <header class="topbar">
+    <strong>Ardoise Grossiste</strong>
+    <span class="muted">dépôt — Touba Ocass</span>
+    <span id="total" class="total"></span>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Nouveau</h2>
+      <label>Client
+        <select id="cust"></select>
+      </label>
+      <div class="row">
+        <input id="new-name" placeholder="Nouveau client (nom)" />
+        <button id="add-cust" class="ghost">+ Client</button>
+      </div>
+      <label>Montant (FCFA)
+        <input id="amount" type="number" inputmode="numeric" placeholder="50000" />
+      </label>
+      <div class="row">
+        <button id="deliver">Livraison (dette +)</button>
+        <button id="pay" class="pay">Paiement Wave (−)</button>
+      </div>
+
+      <h2>Calcul prix de revient</h2>
+      <label>Achat lot <input id="lc-purchase" type="number" placeholder="1000000" /></label>
+      <label>Transport <input id="lc-transport" type="number" placeholder="100000" /></label>
+      <label>Unités <input id="lc-units" type="number" placeholder="500" /></label>
+      <button id="calc" class="ghost">Prix plancher / unité</button>
+      <p id="lc-out" class="muted"></p>
+    </section>
+
+    <section class="report">
+      <h2>Qui doit combien <span id="debtor-count" class="muted"></span></h2>
+      <div id="buckets" class="buckets"></div>
+      <ul id="debtors" class="debtors"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="/js/ardoise.js"></script>
+</body>
+</html>
